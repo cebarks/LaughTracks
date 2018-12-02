@@ -11,4 +11,10 @@ class Comedian < ActiveRecord::Base
   def self.unique_cities
     distinct(:city).pluck(:city)
   end
+
+  def self.list_comedians(params)
+    return all unless params.length > 0
+    
+    return where(age: params[:age]) if params[:age]
+  end
 end

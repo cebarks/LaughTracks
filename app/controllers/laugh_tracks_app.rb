@@ -4,7 +4,7 @@ class LaughTracksApp < Sinatra::Base
   end
 
   get '/comedians' do
-    @comedians = Comedian.all
+    @comedians = Comedian.list_comedians(params)
     @statistics = { average_age: Comedian.average_age,
                     average_runtime: Special.average_runtime,
                     unique_cities: Comedian.unique_cities
