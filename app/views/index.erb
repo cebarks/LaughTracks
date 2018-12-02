@@ -4,6 +4,7 @@
     <div id="average-age"> Average Age: <%= @statistics[:average_age] %></div>
     <div id="average-runtime">Average Runtime: <%= @statistics[:average_runtime] %></div>
     <div id="unique-cities">Unique Cities: <%= @statistics[:unique_cities].join('; ') %></div>
+    <div id="special-count">Special Count: <%= @statistics[:special_count] %></div>
   </div>
   <div id='comedians-container'>
     <% @comedians.each_with_index do |comedian, cindex| %>
