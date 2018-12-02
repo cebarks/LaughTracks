@@ -12,4 +12,19 @@ RSpec.describe Comedian do
       end
     end
   end
+  describe 'Class Methods' do
+    it ".average_age" do
+      Comedian.create(name: "test1", age: 60)
+      Comedian.create(name: "test2", age: 40)
+
+      expect(Comedian.average_age).to eq(50)
+    end
+    it ".unique_cities" do
+      Comedian.create(name: "test1", age: 60, city: 'Denver')
+      Comedian.create(name: "test2", age: 50, city: 'Denver')
+      Comedian.create(name: "test2", age: 40, city: 'Pueblo')
+
+      expect(Comedian.unique_cities).to eq(%w[Pueblo Denver])
+    end
+  end
 end
