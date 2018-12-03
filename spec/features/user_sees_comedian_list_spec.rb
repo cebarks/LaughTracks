@@ -1,6 +1,6 @@
 RSpec.describe "As a user" do
   describe 'When I visit /comedians' do
-    it 'displays a lit of comedians with name, age, and city' do
+    it 'displays a lit of comedians with name, age, and city.' do
       jim_jefferies = Comedian.create(name: 'Jim Jefferies', age: 41, city: 'Sydney, Australia')
 
       visit '/comedians'
